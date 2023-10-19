@@ -8,7 +8,14 @@ public enum Queries {
     GET_ALL_USERS("SELECT * FROM users"),
 
     GET_USER_BY_ID("SELECT * FROM users WHERE ID=?"),
-    DELETE_USER_BY_ID("DELETE FROM users WHERE ID=?");
+    UPDATE_USER_BY_ID("UPDATE users SET name=?,surname=? WHERE id=?"),
+    DELETE_USER_BY_ID("DELETE FROM users WHERE ID=?"),
+    CREATE_EXPENSE_CATEGORY("INSERT INTO expense_categories(name) values(?)"),
+        GET_EXPENSE_CATEGORY_BY_ID("SELECT * FROM EXPENSE_CATEGORIES WHERE ID=?"),
+    GET_ALL_EXPENSES("SELECT * FROM expenses"),
+    UPDATE_EXPENSE_BY_ID("UPDATE expenses SET name=?, date=?, amount=?, category_id=?, user_id=?, description=? WHERE id=? "),
+    GET_SUM_OF_ALL_EXPENSES("SELECT SUM(amount) AS total FROM expenses WHERE category_id=? AND date BETWEEN ? AND ?"),
+    INSERT_EXPENCE("INSERT INTO expenses(name,date,amount,category_id,user_id,description) values(?,?,?,?,?,?)" );
 
     private String value;
 

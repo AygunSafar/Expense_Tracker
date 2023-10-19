@@ -18,4 +18,12 @@ public class ExpenseCategory {
     public String getExpenseCatName() {
         return expenseCatName;
     }
+
+    @Override
+    public String toString() {
+        return "ExpenseCategory{" +
+                "id=" + id +
+                ", expenseCatName='" + expenseCatName + '\'' +
+                '}';
+    }
 }

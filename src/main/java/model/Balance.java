@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 public class Balance {
 
     private  int id;
-    private Integer amount;
+    private Integer amount=0;
     private LocalDateTime date;
     private User user;
 
